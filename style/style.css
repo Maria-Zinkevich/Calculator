@@ -191,6 +191,7 @@
     border: none;
     border-radius: 16px;
     box-shadow: -10px -10px 24px rgba(255, 255, 255, 0.6), 10px 10px 24px #aeaec033;
+    outline: none;
 }
 
 .calculator__btn--operation {
