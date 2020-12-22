@@ -127,16 +127,6 @@
     border-radius: 12px 12px 0px 0px;
 }
 
-.calculator__output {
-    padding: 0 10px;
-
-    font-weight: 500;
-    font-size: 30px;
-    text-align: right;
-    color: #F2F2F4;
-    opacity: 0.2;;
-}
-
 .calculator__operation {
     padding: 0 10px;
 
@@ -145,7 +135,7 @@
     color: rgba(114, 138, 183, 0.65);
 }
 
-.calculator__input {
+.calculator__result {
     padding: 0 10px;
 
     font-weight: 500;
