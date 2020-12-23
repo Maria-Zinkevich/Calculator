@@ -14,12 +14,17 @@ class Calculator {
     }
 
     appendNumber(number) {
-        if (number === '.' && this.currentOperand.includes('.')) return
+        if (number === '.' && this.currentOperand.includes('.')) {
+            return
+        }
         this.currentOperand = this.currentOperand.toString() + number.toString();
     }
 
     chooseOperation(operation) {
-        if (this.currentOperand === '') return
+        if (this.currentOperand === '') {
+            return 
+        }
+
         if (this.previousOperand !== '') {
             this.compute();
         }
@@ -32,7 +37,9 @@ class Calculator {
         let computation;
         const prev = parseFloat(this.previousOperand);
         const current = parseFloat(this.currentOperand);
-        if (isNaN(prev) || isNaN(current)) return;
+        if (isNaN(prev) || isNaN(current)) {
+            return
+        }
         switch (this.operation) {
           case '+':
             computation = prev + current;
@@ -58,17 +65,16 @@ class Calculator {
         const stringNumber = number.toString();
         const integerDigits = parseFloat(stringNumber.split('.')[0]);
         const decimalDigits = stringNumber.split('.')[1];
-        let integerDisplay;
-        if (isNaN(integerDigits)) {
-            integerDisplay = '';
-        } else {
+        let integerDisplay = '';
+        if (!isNaN(integerDigits)) {
             integerDisplay = integerDigits.toLocaleString('en', { maximumFractionDigits: 0 });
         }
-        if (decimalDigits != null) {
+
+        if (decimalDigits) {
             return `${integerDisplay}.${decimalDigits}`;
-        } else {
-            return integerDisplay;
-        }
+        } 
+
+        return integerDisplay; 
     }
 
     updateDisplay() {
