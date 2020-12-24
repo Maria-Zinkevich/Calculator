@@ -13,6 +13,17 @@ class Calculator {
         this.operation = undefined;
     }
 
+    computeOperationWithPercent() {
+        if (!this.previousOperand) {
+            return
+        }
+        this.operationElement.innerText = `${this.previousOperand}${this.operation}${this.currentOperand}%`;
+        this.currentOperand = (this.currentOperand / 100) * this.previousOperand;
+        if (equalButton) {
+            this.resultElement.innerText =  this.currentOperand;
+        }
+    };
+
     appendNumber(number) {
         if (number === '.' && this.currentOperand.includes('.')) {
             return
@@ -89,10 +100,11 @@ class Calculator {
 
 const numberButtons = document.querySelectorAll('.calculator__btn--number');
 const operationButtons = document.querySelectorAll('.calculator__btn--operation'); 
-const equalsButton = document.querySelector('.calculator__btn--equal'); 
+const equalButton = document.querySelector('.calculator__btn--equal'); 
 const allClearButton = document.querySelector('.calculator__btn--clear');
 const operationElement = document.querySelector('.calculator__operation');
 const resultElement = document.querySelector('.calculator__result');
+const percentButton = document.querySelector('.calculator__btn--percent');
 
 const calculator = new Calculator(operationElement, resultElement);
   
@@ -110,7 +122,7 @@ operationButtons.forEach(button => {
     })
 })
 
-equalsButton.addEventListener('click', () => {
+equalButton.addEventListener('click', () => {
     calculator.compute();
     calculator.updateDisplay();
 })
@@ -119,3 +131,8 @@ allClearButton.addEventListener('click', () => {
     calculator.clear();
     calculator.updateDisplay();
 })
+
+percentButton.addEventListener('click', () => {
+    calculator.computeOperationWithPercent();
+  })
+  
