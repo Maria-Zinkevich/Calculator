@@ -22,7 +22,12 @@ class Calculator {
         if (equalButton) {
             this.resultElement.innerText =  this.currentOperand;
         }
-    };
+    }
+
+    computeOperationWithNegativeValues() {
+        this.currentOperand = `-${this.currentOperand}`;
+        this.resultElement.innerText = this.currentOperand;
+    }
 
     appendNumber(number) {
         if (number === '.' && this.currentOperand.includes('.')) {
@@ -105,6 +110,7 @@ const allClearButton = document.querySelector('.calculator__btn--clear');
 const operationElement = document.querySelector('.calculator__operation');
 const resultElement = document.querySelector('.calculator__result');
 const percentButton = document.querySelector('.calculator__btn--percent');
+const plusMinusButton = document.querySelector('.calculator__btn--plus-minus');
 
 const calculator = new Calculator(operationElement, resultElement);
   
@@ -134,5 +140,9 @@ allClearButton.addEventListener('click', () => {
 
 percentButton.addEventListener('click', () => {
     calculator.computeOperationWithPercent();
-  })
+})
+
+plusMinusButton.addEventListener('click', () => {
+    calculator.computeOperationWithNegativeValues();
+})
   
