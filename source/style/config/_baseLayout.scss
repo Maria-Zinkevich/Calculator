@@ -16,54 +16,31 @@
     overflow: hidden;
 
     &__rectangle {
-        position: absolute;
+        @include position-figure(110px, 125px, 12px);
+
         left: 7%;
         bottom: 55%;
-
-        width: 110px;
-        height: 125px;
-
-        background: #F0F0F3;
-        box-shadow: -10px -10px 30px #FFFFFF, 10px 10px 30px rgba(174, 174, 192, 0.4);
-        border-radius: 12px;
     }
 
     &__square {
-        position: absolute;
+        @include position-figure(150px, 150px, 12px);
+
         right: 7%;
         top: 5%;
-
-        width: 150px;
-        height: 150px;
-
-        background: #F0F0F3;
-        box-shadow: -10px -10px 30px #FFFFFF, 10px 10px 30px rgba(174, 174, 192, 0.4);
-        border-radius: 12px;
     }
 
     &__circle--md {
-        position: absolute;
+        @include position-figure(195px, 195px, 50%);
+
         left: 7%;
         top: 76%;
-
-        width: 195px;
-        height: 195px;
-
-        background: #F0F0F3;
-        box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #FFFFFF;
-        border-radius: 50%;
     }
 
     &__circle--sm {
-        position: absolute;
-        width: 125px;
-        height: 125px;
+        @include position-figure(125px, 125px, 50%);
+
         right: 7%;
         top: 60%;
-        
-        background: #F0F0F3;
-        box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #FFFFFF;
-        border-radius: 50%;
     }
 }
 

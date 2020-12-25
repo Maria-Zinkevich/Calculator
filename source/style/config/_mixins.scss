@@ -1,0 +1,13 @@
+// position of figures
+
+@mixin position-figure($width, $height, $radius) {
+    position: absolute;
+
+    width: $width;
+    height: $height;
+
+    background: #F0F0F3;
+    box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #FFFFFF;
+
+    border-radius: $radius;
+}

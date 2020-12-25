@@ -364,50 +364,50 @@ template {
 
 .wrapper__rectangle {
   position: absolute;
-  left: 7%;
-  bottom: 55%;
   width: 110px;
   height: 125px;
   background: #F0F0F3;
-  -webkit-box-shadow: -10px -10px 30px #FFFFFF, 10px 10px 30px rgba(174, 174, 192, 0.4);
-          box-shadow: -10px -10px 30px #FFFFFF, 10px 10px 30px rgba(174, 174, 192, 0.4);
+  -webkit-box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #FFFFFF;
+          box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #FFFFFF;
   border-radius: 12px;
+  left: 7%;
+  bottom: 55%;
 }
 
 .wrapper__square {
   position: absolute;
-  right: 7%;
-  top: 5%;
   width: 150px;
   height: 150px;
   background: #F0F0F3;
-  -webkit-box-shadow: -10px -10px 30px #FFFFFF, 10px 10px 30px rgba(174, 174, 192, 0.4);
-          box-shadow: -10px -10px 30px #FFFFFF, 10px 10px 30px rgba(174, 174, 192, 0.4);
+  -webkit-box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #FFFFFF;
+          box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #FFFFFF;
   border-radius: 12px;
+  right: 7%;
+  top: 5%;
 }
 
 .wrapper__circle--md {
   position: absolute;
-  left: 7%;
-  top: 76%;
   width: 195px;
   height: 195px;
   background: #F0F0F3;
   -webkit-box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #FFFFFF;
           box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #FFFFFF;
   border-radius: 50%;
+  left: 7%;
+  top: 76%;
 }
 
 .wrapper__circle--sm {
   position: absolute;
   width: 125px;
   height: 125px;
-  right: 7%;
-  top: 60%;
   background: #F0F0F3;
   -webkit-box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #FFFFFF;
           box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #FFFFFF;
   border-radius: 50%;
+  right: 7%;
+  top: 60%;
 }
 
 .calculator-container {
