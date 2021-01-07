@@ -16,8 +16,8 @@ export class Calculator {
             return
         }
         this.operationElement.innerText = `${this.previousOperand}${this.operation}${this.currentOperand}%`;
-        this.currentOperand = (this.currentOperand / 100) * this.previousOperand;
-        if (equalButton) {
+        this.currentOperand = (this.currentOperand * this.previousOperand) / 100;
+        if (this.equalButton) {
             this.resultElement.innerText =  this.currentOperand;
         }
     }
@@ -80,7 +80,7 @@ export class Calculator {
             default:
                 return
         }
-        this.currentOperand = +computation.toFixed(8);
+        this.currentOperand = +computation.toFixed(7);
         this.operation = undefined;
         this.previousOperand = '';
     }
