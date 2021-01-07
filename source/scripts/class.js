@@ -34,6 +34,9 @@ export class Calculator {
         if (number === '.' && this.currentOperand.includes('.')) {
             return
         }
+        if (number !== '.' && this.currentOperand === '0') {
+            return
+        } 
         this.currentOperand = this.currentOperand.toString() + number.toString();
     }
 
@@ -90,7 +93,6 @@ export class Calculator {
         if (decimalDigits) {
             return `${integerDisplay}.${decimalDigits}`;
         } 
-
         return integerDisplay; 
     }
 
