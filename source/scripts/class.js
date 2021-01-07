@@ -61,20 +61,24 @@ export class Calculator {
             return
         }
         switch (this.operation) {
-          case '+':
-            computation = prev + current;
+            case '+':
+                computation = prev + current;
             break;
-          case '-':
-            computation = prev - current;
-            break;
-          case '×':
-            computation = prev * current;
-            break;
-          case '÷':
-            computation = prev / current;
-            break;
-          default:
-            return
+            case '-':
+                computation = prev - current;
+                break;
+            case '×':
+                computation = prev * current;
+                break;
+            case '÷':
+                if(current === 0) {
+                    this.currentOperand = 'Error';
+                    return
+                }
+                computation = prev / current;
+                break;
+            default:
+                return
         }
         this.currentOperand = +computation.toFixed(8);
         this.operation = undefined;
