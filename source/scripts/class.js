@@ -23,6 +23,9 @@ export class Calculator {
     }
 
     computeOperationWithNegativeValues() {
+        if (this.currentOperand === '-' || this.currentOperand.includes('-')) {
+            return
+        }
         this.currentOperand = `-${this.currentOperand}`;
         this.resultElement.innerText = this.currentOperand;
     }
